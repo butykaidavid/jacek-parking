@@ -2085,8 +2085,24 @@ ul {
     overflow-x: hidden;
   }
 
+  .nav {
+    padding: 1.4rem 2rem;
+  }
+
+  .nav__inner {
+    gap: 1.2rem;
+  }
+
   .nav__toggle {
     display: flex;
+    flex-shrink: 0;
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+
+  .nav__brand {
+    flex: 1;
+    min-width: 0;
   }
 
   .nav__cluster {
@@ -2118,13 +2134,13 @@ ul {
   .language-switcher select {
     width: 100%;
     text-align: center;
-    padding: 1rem 3rem 1rem 1.6rem;
-    font-size: 1.4rem;
+    padding: 0.8rem 2.8rem 0.8rem 1.4rem;
+    font-size: 1.3rem;
   }
 
   .nav__cta {
-    padding: 1rem 1.6rem;
-    font-size: 1.4rem;
+    padding: 0.9rem 1.4rem;
+    font-size: 1.3rem;
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -2132,15 +2148,15 @@ ul {
 
   .nav__menu {
     position: absolute;
-    top: calc(100% + 1.6rem);
+    top: calc(100% + 1.2rem);
     right: 2rem;
     left: 2rem;
     background: rgba(9, 12, 29, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-md);
-    padding: 2rem;
+    padding: 1.6rem;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
     min-width: auto;
     max-width: calc(100vw - 4rem);
     opacity: 0;
@@ -2158,6 +2174,11 @@ ul {
   .nav__cta {
     margin-left: 0;
     width: 100%;
+  }
+
+  .nav__link {
+    padding: 0.8rem 1rem;
+    font-size: 1.3rem;
   }
 
   /* stylelint-enable property-no-unsupported-browser-features */
