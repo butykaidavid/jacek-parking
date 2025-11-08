@@ -2096,11 +2096,22 @@ ul {
     position: static;
     transform: none;
     width: 100%;
+    justify-content: center;
+  }
+
+  .language-switcher select {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 3rem 1rem 1.6rem;
+    font-size: 1.4rem;
   }
 
   .nav__cta {
-    padding: 0.75rem 1.4rem;
-    font-size: 1.2rem;
+    padding: 1rem 1.6rem;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 
   .nav__menu {
@@ -2311,6 +2322,20 @@ ul {
   .hero__actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 1.2rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.4rem;
+    justify-content: center;
+  }
+
+  .hero__link {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
   }
 
   .hero__image img {
