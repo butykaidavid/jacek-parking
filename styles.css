@@ -2090,7 +2090,8 @@ ul {
   }
 
   .nav__inner {
-    gap: 1.2rem;
+    gap: 1rem;
+    justify-content: space-between;
   }
 
   .nav__toggle {
@@ -2098,19 +2099,17 @@ ul {
     flex-shrink: 0;
     width: 4.4rem;
     height: 4.4rem;
+    order: 3;
   }
 
   .nav__brand {
     flex: 1;
     min-width: 0;
+    order: 1;
   }
 
   .nav__cluster {
-    gap: 1.2rem;
-    padding: 0;
-    border: none;
-    background: transparent;
-    box-shadow: none;
+    display: none;
   }
 
   .nav__actions {
@@ -2147,33 +2146,7 @@ ul {
   }
 
   .nav__menu {
-    position: absolute;
-    top: calc(100% + 1.2rem);
-    right: 2rem;
-    left: 2rem;
-    background: rgba(9, 12, 29, 0.95);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: var(--radius-md);
-    padding: 1.6rem;
-    flex-direction: column;
-    gap: 1rem;
-    min-width: auto;
-    max-width: calc(100vw - 4rem);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-12px);
-    transition: opacity 0.25s ease, transform 0.25s ease;
-    -webkit-backdrop-filter: blur(14px);
-    /* stylelint-disable-next-line property-no-unsupported-browser-features */
-    backdrop-filter: blur(14px);
-    flex: initial;
-    justify-content: flex-start;
-    z-index: 1000;
-  }
-
-  .nav__cta {
-    margin-left: 0;
-    width: 100%;
+    display: none;
   }
 
   .nav__link {
@@ -2183,10 +2156,35 @@ ul {
 
   /* stylelint-enable property-no-unsupported-browser-features */
 
+  .nav--open .nav__cluster {
+    display: block;
+    position: absolute;
+    top: calc(100% + 1.2rem);
+    right: 2rem;
+    left: 2rem;
+    background: rgba(9, 12, 29, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-md);
+    padding: 1.6rem;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+  }
+
   .nav--open .nav__menu {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav--open .nav__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .hero__grid {
