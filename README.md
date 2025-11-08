@@ -8,7 +8,7 @@ Professzionális weboldal a Jacek Tirparking kamionparkoló számára Halmaj-ban
 
 ## 🌐 Élő Demo
 
-**🔗 [Nézd meg az oldalt itt!](https://yourusername.github.io/jacek-parking/)**
+**🔗 [Nézd meg az oldalt itt!](https://butykaidavid.github.io/jacek-parking/)**
 
 ## ✨ Főbb Funkciók
 
@@ -101,7 +101,7 @@ Professzionális weboldal a Jacek Tirparking kamionparkoló számára Halmaj-ban
 
 1. **Klónozás**
 ```bash
-git clone https://github.com/yourusername/jacek-parking.git
+git clone https://github.com/butykaidavid/jacek-parking.git
 cd jacek-parking
 ```
 
@@ -129,7 +129,7 @@ http://localhost:8000
 
 Az oldal automatikusan elérhető a GitHub Pages-en:
 ```
-https://yourusername.github.io/jacek-parking/
+https://butykaidavid.github.io/jacek-parking/
 ```
 
 ## 📂 Projekt Struktúra
@@ -228,11 +228,7 @@ A `main.js` tartalmazza:
 
 ## 📄 Dokumentáció
 
-Részletes dokumentációk a projektben:
-- **`MOBILE_OPTIMIZATION.md`** - Mobil optimalizálás részletei
-- **`DEVICE_TESTING_REPORT.md`** - Eszköz tesztelési jelentés
-- **`ENHANCEMENTS.md`** - Implementált fejlesztések
-- **`ADVANCED_FEATURES.md`** - Haladó funkciók
+A projekt teljes dokumentációja ebben a README fájlban található.
 
 ## 🤝 Hozzájárulás
 
@@ -242,8 +238,8 @@ Ez egy privát projekt, de ha hibát találsz vagy javaslatod van, nyiss egy iss
 
 **Jacek Tirparking**
 - 📍 Halmaj, Magyarország
-- 🌐 [Weboldal](https://yourusername.github.io/jacek-parking/)
-- 📧 Email: info@jacektirparking.hu (példa)
+- 🌐 [Weboldal](https://butykaidavid.github.io/jacek-parking/)
+- 📧 Email: info@jacektirparking.hu
 
 ## 📝 Licensz
 
