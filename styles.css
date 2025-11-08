@@ -2080,19 +2080,20 @@ ul {
 
   section,
   .section,
-  .hero,
-  .nav {
+  .hero {
     overflow-x: hidden;
   }
 
   .nav {
     padding: 1.4rem 2rem;
     z-index: 9998;
+    overflow: visible !important;
   }
 
   .nav__inner {
     gap: 1rem;
     justify-content: space-between;
+    overflow: visible;
   }
 
   .nav__toggle {
@@ -2142,6 +2143,18 @@ ul {
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
     max-width: calc(100vw - 4rem);
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .nav--open .nav__menu {
