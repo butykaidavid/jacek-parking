@@ -2131,10 +2131,12 @@ ul {
 
   .nav--open .nav__cluster {
     display: block;
-    position: absolute;
-    top: calc(100% + 1.2rem);
-    right: 2rem;
-    left: 2rem;
+    position: fixed;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 4rem);
+    max-width: 400px;
     background: rgba(9, 12, 29, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-md);
@@ -2142,18 +2144,17 @@ ul {
     z-index: 9999;
     -webkit-backdrop-filter: blur(14px);
     backdrop-filter: blur(14px);
-    max-width: calc(100vw - 4rem);
     animation: slideDown 0.3s ease-out forwards;
   }
 
   @keyframes slideDown {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateX(-50%) translateY(-10px);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(-50%) translateY(0);
     }
   }
 
