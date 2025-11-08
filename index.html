@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="hu" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#070816" />
+    <title>Jacek Tirparking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/images/hero-trucks-frigo.webp" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav" data-nav>
+      <div class="nav__inner">
+        <a class="nav__brand" href="#hero" aria-label="Vissza a kezdőszakaszhoz">
+          <span class="nav__brand-badge" aria-hidden="true">JT</span>
+          <span class="nav__brand-text">
+            <span class="nav__brand-title">Jacek Tirparking</span>
+            <span class="nav__brand-subtitle" data-i18n="nav.brand_subtitle">Halmaj • 24/7</span>
+          </span>
+        </a>
+        <button class="nav__toggle" aria-label="Menü megnyitása" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav__cluster">
+          <nav class="nav__menu" aria-label="Fő navigáció">
+            <a class="is-current" href="#szolgaltatasok" data-i18n="nav.services">Szolgáltatások</a>
+            <a href="#workflow" data-i18n="nav.workflow">Érkezés menete</a>
+            <a href="#lokacio" data-i18n="nav.location">Lokáció</a>
+            <a href="#borok" data-i18n="nav.wine">Prémium borok</a>
+            <a href="#arlista" data-i18n="nav.pricing">Árlista</a>
+          </nav>
+          <div class="nav__actions">
+            <div class="language-switcher">
+              <label for="language-select" class="sr-only" data-i18n="language.label">Válassz nyelvet</label>
+              <select id="language-select" aria-label="Nyelvválasztó" data-i18n-aria-label="language.aria">
+                <option value="hu">HU</option>
+                <option value="en">EN</option>
+                <option value="ru">RU</option>
+                <option value="uk">UK</option>
+                <option value="sk">SK</option>
+                <option value="sl">SL</option>
+                <option value="pl">PL</option>
+                <option value="ro">RO</option>
+              </select>
+            </div>
+            <a
+              class="nav__cta"
+              href="https://share.google/jd2f8h6adBJclbngv"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.cta_directions"
+            >Útvonal a parkolóhoz</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <div class="hero__grid">
+        <div class="hero__text">
+          <span class="label label--light" data-i18n="hero.label">Non-stop védelem • Prémium kiszolgálás</span>
+          <div class="hero__status" data-status>
+            <span class="hero__status-indicator" aria-hidden="true"></span>
+            <div class="hero__status-copy">
+              <strong data-i18n="hero.status_now">Most nyitva</strong>
+              <span>
+                <span data-i18n="hero.status_prefix">Szabad helyek:</span>
+                <span class="hero__status-count" data-status-count>6</span>
+                <span data-i18n="hero.status_suffix">pillanatnyilag elérhető</span>
+              </span>
+            </div>
+          </div>
+          <h1 data-i18n="hero.title">
+            Biztonságos kamion parkoló
+            <span>foglalás nélkül, 0-24</span>
+          </h1>
+          <p data-i18n="hero.description">
+            Nálunk bármikor megállhatsz előzetes regisztráció nélkül. A Jacek
+            Tirparking teljes területe kamerákkal megfigyelt, teljesen aszfaltozott
+            és kerítéssel körülvett. A Terminal & Shop 0-24 vár, közvetlenül
+            mellettünk az OIL! benzinkút, a Velvet Étterem és a gumiszerviz
+            gondoskodik a sofőrök kényelméről.
+          </p>
+          <div class="hero__actions">
+            <a
+              class="btn btn--primary"
+              href="https://share.google/jd2f8h6adBJclbngv"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.cta_directions"
+            >Útvonal a parkolóhoz</a>
+            <a class="btn btn--ghost" href="#szolgaltatasok" data-i18n="hero.cta_services">Szolgáltatások</a>
+            <a class="hero__link" href="#arlista" data-i18n="hero.cta_pricing">Árlista →</a>
+          </div>
+            <div class="hero__stats">
+            <div class="stat">
+              <strong>50+</strong>
+              <span data-i18n="hero.stat_capacity">Férőhely kamerás felügyelettel</span>
+            </div>
+            <div class="stat">
+              <strong>0-24</strong>
+              <span data-i18n="hero.stat_reception">Nyitva tartó Terminal & Shop</span>
+            </div>
+            <div class="stat">
+              <strong>1</strong>
+              <span data-i18n="hero.stat_cold">Elkülönített hűtős blokk</span>
+            </div>
+            <div class="stat">
+              <strong>15</strong>
+              <span data-i18n="hero.stat_years">Év tapasztalat</span>
+            </div>
+          </div>
+          <div class="hero__trust">
+            <span data-i18n="hero.trust_title">Partnereink bizalmával:</span>
+            <div class="hero__trust-logos" aria-hidden="true">
+              <span data-i18n="hero.trust_oil">OIL! Halmaj</span>
+              <span data-i18n="hero.trust_velvet">Velvet Étterem</span>
+              <span data-i18n="hero.trust_gombi">Gombi gumi- és autószerviz</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__media">
+          <figure class="hero__image">
+            <picture>
+              <source srcset="assets/images/hero-trucks-frigo.webp" type="image/webp" />
+              <img
+                src="assets/images/hero-trucks-frigo.jpg"
+                alt="Kamionok a Jacek Tirparking hűtős blokkjában, FRIGO irányt jelző táblával"
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+          <figure class="hero__image hero__image--secondary" aria-hidden="true">
+            <picture>
+              <source srcset="assets/images/hero-trucks-yard.webp" type="image/webp" />
+              <img
+                src="assets/images/hero-trucks-yard.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </picture>
+          </figure>
+          <div class="hero__floating-card hero__floating-card--top">
+            <p data-i18n="hero.badge_security">Több ponton létesített kamerás felügyelet</p>
+            <span data-i18n="hero.badge_monitoring">Folyamatos megfigyeléssel</span>
+          </div>
+          <div class="hero__floating-card hero__floating-card--bottom">
+            <div>
+              <h3 data-i18n="hero.card_title">Terminal & Shop</h3>
+              <p data-i18n="hero.card_text">Fizetés, vásárlás, zuhany, mosdó, snack és ital</p>
+            </div>
+            <span class="badge badge--accent" data-i18n="hero.card_badge">Nyitva 0-24</span>
+          </div>
+          <div class="hero__orbit"></div>
+        </div>
+      </div>
+      <div class="hero__blur hero__blur--one"></div>
+      <div class="hero__blur hero__blur--two"></div>
+    </section>
+
+    <main>
+      <section id="lokacio" class="section location" data-reveal>
+        <div class="location__grid">
+          <div class="location__info">
+            <span class="label" data-i18n="location.label">Lokáció</span>
+            <h2 data-i18n="location.title">Biztonságos megálló Halmaj szívében</h2>
+            <p data-i18n="location.description">
+              Parkolónk a 3-as főút mentén, a Halmaj lehajtótól néhány percre
+              található. Teljesen aszfaltozott, kerítéssel körülvett területünkön
+              kényelmesen megfordulnak a nagy szerelvények is, miközben minden
+              fontos szolgáltatás karnyújtásnyira elérhető.
+            </p>
+            <ul class="location__highlights">
+              <li data-i18n="location.highlight_surveillance">Teljes körű kamerás felügyelet és járőrözés</li>
+              <li data-i18n="location.highlight_cold">Elkülönített hűtős blokk stabil energiaellátással</li>
+              <li data-i18n="location.highlight_services">OIL! benzinkút, Velvet Étterem és gumiszerviz közvetlenül a telek mellett</li>
+            </ul>
+            <div class="location__actions">
+              <a
+                class="btn btn--primary"
+                href="https://share.google/jd2f8h6adBJclbngv"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-i18n="location.cta_route"
+              >Útvonaltervezés</a>
+            </div>
+          </div>
+          <div class="location__card">
+            <div class="location__badge" data-i18n="location.card_badge">Jacek Tirparking</div>
+            <h3 data-i18n="location.card_address">Halmaj, 022/44, 3842 Hungary</h3>
+            <p data-i18n="location.card_phone"><strong>Telefon:</strong> <a href="tel:+36204177877">+36 20 417 7877</a></p>
+            <div class="location__map">
+              <iframe
+                src="https://www.google.com/maps?q=Jacek%20Tirparking%20Halmaj%20022%2044%203842%20Hungary&output=embed"
+                title="Jacek Tirparking térkép"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="location__service-list">
+              <article>
+                <span class="service-icon">⛽</span>
+                <div>
+                  <h4 data-i18n="location.service_oil_title">OIL! benzinkút Halmaj</h4>
+                  <p data-i18n="location.service_oil_text">Tankolás, AdBlue és shop néhány lépésre.</p>
+                </div>
+              </article>
+              <article>
+                <span class="service-icon">🍽️</span>
+                <div>
+                  <h4 data-i18n="location.service_velvet_title">Velvet Étterem Halmaj</h4>
+                  <p data-i18n="location.service_velvet_text">Meleg ételek, napi menü, kávé és desszertek.</p>
+                </div>
+              </article>
+              <article>
+                <span class="service-icon">🛞</span>
+                <div>
+                  <h4 data-i18n="location.service_tire_title">Gombi gumi- és autószerviz</h4>
+                  <p data-i18n="location.service_tire_text">Gyors javítás, gumicsere, nyomásellenőrzés.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="idojaras" class="section weather" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="weather.label">Időjárás & forgalom</span>
+          <h2 data-i18n="weather.title">Friss információk indulás előtt</h2>
+          <p data-i18n="weather.description">
+            Perce pontos időjárási adatok Halmaj környékéről és élő forgalmi térkép, hogy biztonságosan tervezhesd a következő etapot.
+          </p>
+        </div>
+        <div class="weather__grid">
+          <article class="weather__card" data-weather>
+            <header class="weather__header">
+              <div>
+                <h3 data-i18n="weather.current_title">Időjárás most Halmajban</h3>
+                <p class="weather__updated" data-weather-updated data-i18n="weather.updated">Utolsó frissítés: most</p>
+              </div>
+              <button class="weather__refresh" type="button" data-weather-refresh data-i18n="weather.refresh">Frissítés</button>
+            </header>
+            <div class="weather__current">
+              <span class="weather__temp" data-weather-temp>--°C</span>
+              <div class="weather__current-details">
+                <span class="weather__summary" data-weather-description data-i18n="weather.loading">Adatok betöltése...</span>
+                <span class="weather__feels" data-weather-feels>--°C</span>
+              </div>
+            </div>
+            <dl class="weather__meta">
+              <div>
+                <dt data-i18n="weather.wind">Szél</dt>
+                <dd data-weather-wind>-- km/h</dd>
+              </div>
+              <div>
+                <dt data-i18n="weather.precip">Csapadék esély</dt>
+                <dd data-weather-rain>--%</dd>
+              </div>
+              <div>
+                <dt data-i18n="weather.visibility">Látótávolság</dt>
+                <dd data-weather-visibility>-- km</dd>
+              </div>
+            </dl>
+            <div class="weather__forecast" data-weather-forecast></div>
+            <p class="weather__note" data-i18n="weather.note">Az adatok Open-Meteo szolgáltatásból származnak és 30 percenként frissülnek.</p>
+          </article>
+          <article class="traffic-card">
+            <h3 data-i18n="weather.traffic_title">Élő forgalmi térkép</h3>
+            <p data-i18n="weather.traffic_description">Nézd meg a térség aktuális forgalmát és tervezd meg a következő szakaszt.</p>
+            <div class="traffic-card__map">
+              <iframe
+                src="https://embed.waze.com/iframe?zoom=13&lat=48.2045&lon=20.8889"
+                title="Waze live traffic map"
+                loading="lazy"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <a
+              class="traffic-card__cta"
+              href="https://www.waze.com/live-map/directions?to=place.ChIJdxGNs6p-XEcRnsJuhi7kGcY"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="weather.traffic_cta"
+            >Útvonaltervezés Waze-ben</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="borok" class="section wine" data-reveal>
+        <div class="wine__layout">
+          <div class="wine__text">
+            <span class="label" data-i18n="wine.label">Prémium boraink</span>
+            <h2 data-i18n="wine.title">Exkluzív választék a Jacek Tirparking shopjában</h2>
+            <p data-i18n="wine.description">
+              Kézzel válogatott, díjnyertes borokat tartunk, amelyek tökéletesen
+              zárják a napot egy hosszú út után. Bársonyosan telt vörösek,
+              hűsítő rozék és friss, gyümölcsös fehérek várnak hűtve,
+              azonnali fogyasztásra készen.
+            </p>
+            <ul class="wine__highlights">
+              <li data-i18n="wine.point1">Sommelier által állított borlap, limitált tételekkel</li>
+              <li data-i18n="wine.point2">Klímaszabályozott tárolás a shopban</li>
+              <li data-i18n="wine.point3">Ajánlott párosításaink sofőrbarát menühöz</li>
+            </ul>
+            <div class="wine__nota-bene" data-i18n="wine.note">
+              Minden palackból csak néhány darab érhető el – érdemes még indulás előtt beszerezni.
+            </div>
+          </div>
+        <div class="wine__gallery">
+          <figure class="wine__card">
+            <div class="wine__card-media">
+              <img src="https://images.pexels.com/photos/1407856/pexels-photo-1407856.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Villányi cabernet sauvignon palack asztalon" loading="lazy" />
+              <span class="wine__card-badge">Reserve</span>
+            </div>
+            <figcaption>
+              <strong data-i18n="wine.card1">Villányi cabernet sauvignon • 2018</strong>
+              <span class="wine__card-note" data-i18n="wine.card1_note">Selymes tannin, fekete ribizli, étcsokoládé</span>
+            </figcaption>
+          </figure>
+          <figure class="wine__card">
+            <div class="wine__card-media">
+              <img src="https://images.pexels.com/photos/1407316/pexels-photo-1407316.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Balatoni olaszrizling hűtve felszolgálva" loading="lazy" />
+              <span class="wine__card-badge wine__card-badge--light">Chilled</span>
+            </div>
+            <figcaption>
+              <strong data-i18n="wine.card2">Balatoni olaszrizling • 2022</strong>
+              <span class="wine__card-note" data-i18n="wine.card2_note">Citrus, zöldalma, ásványos lecsengés</span>
+            </figcaption>
+          </figure>
+          <figure class="wine__card wine__card--accent">
+            <div class="wine__card-media">
+              <img src="https://images.pexels.com/photos/214822/pexels-photo-214822.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Szekszárdi kékfrankos rosé üveg és pohár" loading="lazy" />
+              <span class="wine__card-badge wine__card-badge--spark">Limited</span>
+            </div>
+            <figcaption>
+              <strong data-i18n="wine.card3">Szekszárdi kékfrankos rosé • 2023</strong>
+              <span class="wine__card-note" data-i18n="wine.card3_note">Málna, eper, könnyed buborékosság</span>
+            </figcaption>
+          </figure>
+        </div>
+        </div>
+      </section>
+
+      <section id="shop" class="section shop" data-reveal>
+        <div class="shop__layout">
+          <div class="shop__intro">
+            <span class="label" data-i18n="shop.label">Shop kínálat</span>
+            <h2 data-i18n="shop.title">Friss snackek és italok az érkezést követően</h2>
+            <p data-i18n="shop.description">
+              A Terminal & Shop polcain a borokon túl energiát adó snackek, forró italok és hűtött üdítők várnak.
+              Sofőrbarát csomagokat készítünk össze indulás előtt, hogy minden kéznél legyen.
+            </p>
+            <ul class="shop__highlights">
+              <li data-i18n="shop.point1">Érkezéskor ajándék sör a zuhanycsomaghoz</li>
+              <li data-i18n="shop.point2">Friss szendvicsek, levesek és kávé 0-24</li>
+              <li data-i18n="shop.point3">Energiaitalok, vitaminos italok és sofőr snack boxok</li>
+            </ul>
+            <a class="btn btn--outline shop__cta" href="#lokacio" data-i18n="shop.cta">Shop térkép megnyitása</a>
+          </div>
+          <div class="shop__cards">
+            <article class="shop-card">
+              <div class="shop-card__icon" aria-hidden="true">🥪</div>
+              <h3 data-i18n="shop.card1_title">Frissen készült ételek</h3>
+              <p data-i18n="shop.card1_text">Melegíthető levesek, szendvicsek, péksütemények és gyors fogások azonnal elvihető csomagban.</p>
+            </article>
+            <article class="shop-card shop-card--accent">
+              <div class="shop-card__icon" aria-hidden="true">⚡</div>
+              <h3 data-i18n="shop.card2_title">Energia & hidratálás</h3>
+              <p data-i18n="shop.card2_text">Energiaitalok, izotóniás italok, vitamin shotok és prémium kávé, hogy az éjszakai menet is biztonságos legyen.</p>
+            </article>
+            <article class="shop-card">
+              <div class="shop-card__icon" aria-hidden="true">🎁</div>
+              <h3 data-i18n="shop.card3_title">Sofőr ajándékcsomagok</h3>
+              <p data-i18n="shop.card3_text">Előre összeállított csomagok törölközővel, tusfürdővel, snackkel és ajándék sörrel a felfrissüléshez.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="szolgaltatasok" class="section features" data-reveal>
+      <div class="section__header">
+        <span class="label" data-i18n="services.label">Szolgáltatásaink</span>
+        <h2 data-i18n="services.title">Mindennel felszerelve, ami a fuvarozóknak számít</h2>
+        <p data-i18n="services.description">
+          A Jacek Tirparking fokozottan védett, elkülönített zónákkal,
+          tisztálkodási lehetőséggel és 0-24 shop-pal vár, hogy a sofőrök
+          regenerálódhassanak, a járművek pedig biztonságban álljanak.
+        </p>
+      </div>
+      <div class="grid grid--3">
+        <article class="feature-card">
+          <div class="icon">🛡️</div>
+          <h3 data-i18n="services.card_security_title">24/7 biztonság</h3>
+          <p data-i18n="services.card_security_text">
+            Folyamatos kamerás megfigyelés, élő monitorfal és körjárat gondoskodik a rakományról.
+          </p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">⚡</div>
+          <h3 data-i18n="services.card_entry_title">Egyszerű beléptetés</h3>
+          <p data-i18n="services.card_entry_text">Foglalás nélkül érkezel, a Terminal & Shop csapata gyorsan intézi a beléptetést és kijelöli a parkolót.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">❄️</div>
+          <h3 data-i18n="services.card_cold_title">Hűtős parkoló</h3>
+          <p data-i18n="services.card_cold_text">Külön, zárt sor hűtős kamionoknak, stabil energiaellátással és felügyelettel.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🛏️</div>
+          <h3 data-i18n="services.card_rest_title">Pihenő zóna</h3>
+          <p data-i18n="services.card_rest_text">
+            Tiszta zuhanyzók, friss törölközők és sofőrlounge, hogy valóban kipihenhesd magad.
+          </p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">📶</div>
+          <h3 data-i18n="services.card_wifi_title">Ingyenes WiFi</h3>
+          <p data-i18n="services.card_wifi_text">Gyors, stabil hálózat a parkoló teljes területén a kapcsolattartáshoz és adminisztrációhoz.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🛒</div>
+          <h3 data-i18n="services.card_shop_title">0-24 shop</h3>
+          <p data-i18n="services.card_shop_text">Snack, csoki, chips, friss ételek és italok széles választéka a Terminal & Shopban.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">📱</div>
+          <h3 data-i18n="services.card_billing_title">Rugalmas elszámolás</h3>
+          <p data-i18n="services.card_billing_text">Számla azonnal a helyszínen, készpénzes és bankkártyás fizetés is elérhető.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">⛽</div>
+          <h3 data-i18n="services.card_oil_title">OIL! benzinkút</h3>
+          <p data-i18n="services.card_oil_text">Tankolj közvetlenül a parkoló mellett, gyorsan és kényelmesen.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🍽️</div>
+          <h3 data-i18n="services.card_restaurant_title">Velvet Étterem</h3>
+          <p data-i18n="services.card_restaurant_text">Meleg ételek, napi menü és kávé a sofőröknek pár lépésre a parkolótól.</p>
+        </article>
+        <article class="feature-card">
+          <div class="icon">🛞</div>
+          <h3 data-i18n="services.card_tire_title">Gombi gumi- és autószerviz</h3>
+          <p data-i18n="services.card_tire_text">Gyors defektjavítás, gumicsere és nyomásellenőrzés helyben.</p>
+        </article>
+      </div>
+      </section>
+
+      <section id="workflow" class="section workflow" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="workflow.label">Ügyfélélmény</span>
+          <h2 data-i18n="workflow.title">Egyszerű folyamat érkezéstől indulásig</h2>
+          <p data-i18n="workflow.description">
+            Foglalás nélkül is gördülékeny a beléptetés: kollégáink mindent intéznek,
+            miközben a parkoló végig felügyelet alatt áll.
+          </p>
+        </div>
+        <ol class="workflow__steps">
+          <li class="workflow__step" data-step="1">
+            <div class="workflow__marker" aria-hidden="true">
+              <span class="workflow__dot"></span>
+              <span class="workflow__pulse"></span>
+            </div>
+            <div class="workflow__time" data-i18n="workflow.step1_time">Érkezés</div>
+            <div class="workflow__content">
+              <h3 data-i18n="workflow.step1_title">Foglalás nélkül</h3>
+              <p data-i18n="workflow.step1_text">Állj be a parkolóba szabadon bárhová, majd sétálj be az irodába kollégáinkhoz a parkolójegy kiadásához.</p>
+              <div class="workflow__tooltip" data-i18n="workflow.step1_tooltip">Parkolj le, majd irány a Terminal & Shop beléptetéshez és a parkolójegyhez.</div>
+            </div>
+          </li>
+          <li class="workflow__step" data-step="2">
+            <div class="workflow__marker" aria-hidden="true">
+              <span class="workflow__dot"></span>
+              <span class="workflow__pulse"></span>
+            </div>
+            <div class="workflow__time" data-i18n="workflow.step2_time">Beléptetés</div>
+            <div class="workflow__content">
+              <h3 data-i18n="workflow.step2_title">Rendszám adminisztrálása</h3>
+              <p data-i18n="workflow.step2_text">Rendszám adminisztrálása, parkolójegy átadása, hűtős kamionoknak külön zóna.</p>
+              <div class="workflow__tooltip" data-i18n="workflow.step2_tooltip">Kollégáink felveszik az adatokat, kiosztják a helyet és jelzik a hűtős blokkot.</div>
+            </div>
+          </li>
+          <li class="workflow__step" data-step="3">
+            <div class="workflow__marker" aria-hidden="true">
+              <span class="workflow__dot"></span>
+              <span class="workflow__pulse"></span>
+            </div>
+            <div class="workflow__time" data-i18n="workflow.step3_time">Pihenő</div>
+            <div class="workflow__content">
+              <h3 data-i18n="workflow.step3_title">Tisztálkodás & feltöltődés</h3>
+              <p data-i18n="workflow.step3_text">Zuhanyzók, tisztálkodási lehetőségek, Wc-k, shopból snack és ital, ajándék sörrel a bővített parkolójeggyel.</p>
+              <div class="workflow__tooltip" data-i18n="workflow.step3_tooltip">Friss törölköző, hygiene csomag és ajándék sör vár a zuhany után.</div>
+            </div>
+          </li>
+          <li class="workflow__step" data-step="4">
+            <div class="workflow__marker" aria-hidden="true">
+              <span class="workflow__dot"></span>
+              <span class="workflow__pulse"></span>
+            </div>
+            <div class="workflow__time" data-i18n="workflow.step4_time">Távozás</div>
+            <div class="workflow__content">
+              <h3 data-i18n="workflow.step4_title">Elszámolás a Terminal & Shopban</h3>
+              <p data-i18n="workflow.step4_text">Készpénz vagy bankkártya, számla igény szerint – már indulhatsz is tovább.</p>
+              <div class="workflow__tooltip" data-i18n="workflow.step4_tooltip">Gyors fizetés, számla igény szerint, majd vissza az útra.</div>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="miert" class="section split" data-reveal>
+      <div class="split__image" aria-hidden="true"></div>
+      <div class="split__content">
+        <span class="label" data-i18n="why.label">Miért válassz minket</span>
+        <h2 data-i18n="why.title">Rugalmasság, amit az út diktál</h2>
+        <ul class="list">
+          <li data-i18n="why.point1">
+            <strong>Foglalás nélkül:</strong> bármikor érkezhetsz, a Terminal & Shop azonnal segít a beállásban.
+          </li>
+          <li data-i18n="why.point2">
+            <strong>Folyamatos felügyelet:</strong> kamerás monitorozás és rendszeres járőrözés.
+          </li>
+          <li data-i18n="why.point3">
+            <strong>Sofőrkényelem:</strong> zuhany, tisztálkodó, ajándék sör és 0-24 shop egy helyen.
+          </li>
+          <li data-i18n="why.point4">
+            <strong>Komplex kiszolgálás:</strong> benzinkút, étterem és gumis műhely közvetlenül a parkoló mellett.
+          </li>
+        </ul>
+        <div class="cta-card">
+          <p data-i18n="why.quote">
+            „A Jacek Tirparkingben foglalás nélkül érkeztünk, mégis percek alatt helyet kaptunk és mindenhez hozzáfértünk.”
+          </p>
+          <span data-i18n="why.quote_author">— Kovács Zoltán, EuroTrans Logistics</span>
+        </div>
+      </div>
+      </section>
+
+      <section class="section gallery" data-reveal aria-label="Galéria">
+        <div class="section__header">
+          <span class="label" data-i18n="gallery.label">Galéria</span>
+          <h2 data-i18n="gallery.title">Pillanatképek a Jacek Tirparking mindennapjaiból</h2>
+          <p data-i18n="gallery.description">Nézz bele a parkoló életébe: tiszta zuhanyzók, tágas beállók és a szomszédos szolgáltatások.</p>
+        </div>
+        <div class="gallery__grid">
+          <figure class="gallery__item gallery__item--wide">
+            <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1400&q=80" alt="Éjszakai kamion parkoló megvilágított sorokkal" loading="lazy" />
+          </figure>
+          <figure class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=900&q=80" alt="Kamion sofőr zuhanyzóban készülődik" loading="lazy" />
+          </figure>
+          <figure class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Kamion tankol a benzinkútnál" loading="lazy" />
+          </figure>
+          <figure class="gallery__item gallery__item--tall">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Éttermi fogás a sofőröknek" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section testimonials" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="testimonials.label">Visszajelzések</span>
+          <h2 data-i18n="testimonials.title">Flottavezetők és sofőrök, akik már minket választottak</h2>
+        </div>
+        <div class="testimonials__inner">
+          <aside class="testimonials__scorecard">
+            <div class="testimonials__score-badge">
+              <span class="testimonials__score-value" aria-label="4.8">4.8</span>
+              <span class="testimonials__score-stars">★★★★★</span>
+            </div>
+            <h3 data-i18n="testimonials.score_title">Google értékelés</h3>
+            <p data-i18n="testimonials.score_subtitle">Átlag 120+ sofőr visszajelzéséből</p>
+            <a
+              class="testimonials__score-link"
+              href="https://www.google.com/maps/place/Jacek+Tirparking/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="testimonials.link_all"
+              data-i18n-aria-label="testimonials.link_all_aria"
+            >Összes értékelés →</a>
+          </aside>
+          <div class="testimonials__wall" data-carousel>
+            <div class="testimonials__wall-track" data-carousel-track>
+              <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="1 / 4">
+                <div class="testimonial-card__gradient"></div>
+                <header class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">MS</div>
+                  <div>
+                    <h3 data-i18n="testimonials.card1_name">Mészáros Sándor</h3>
+                    <span data-i18n="testimonials.card1_role">Google értékelés • 2024</span>
+                  </div>
+                </header>
+                <p data-i18n="testimonials.card1_text">
+                  „Gyors check-in, kulturált zuhanyzó és biztonságos parkoló. A személyzet kedves,
+                  mindent megmutattak. Egy éjszakára tökéletes megálló.”
+                </p>
+                <footer class="testimonial-card__footer">
+                  <span class="rating" aria-label="5 csillagos értékelés">★★★★★</span>
+                  <span data-i18n="testimonials.source_google">Forrás: Google értékelés</span>
+                </footer>
+              </article>
+              <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="2 / 4">
+                <div class="testimonial-card__gradient"></div>
+                <header class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">JK</div>
+                  <div>
+                    <h3 data-i18n="testimonials.card2_name">Jovan Kalinic</h3>
+                    <span data-i18n="testimonials.card2_role">Google értékelés • 2024</span>
+                  </div>
+                </header>
+                <p data-i18n="testimonials.card2_text">
+                  „24 órás shop, ajándék sör a zuhany után, és hűtős kamionnal is könnyű a beállás.
+                  A kamerarendszer miatt nyugodtan alszom.”
+                </p>
+                <footer class="testimonial-card__footer">
+                  <span class="rating" aria-label="5 csillagos értékelés">★★★★★</span>
+                  <span data-i18n="testimonials.source_google">Forrás: Google értékelés</span>
+                </footer>
+              </article>
+              <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="3 / 4">
+                <div class="testimonial-card__gradient"></div>
+                <header class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">ES</div>
+                  <div>
+                    <h3 data-i18n="testimonials.card3_name">Ewa S.</h3>
+                    <span data-i18n="testimonials.card3_role">Google értékelés • 2023</span>
+                  </div>
+                </header>
+                <p data-i18n="testimonials.card3_text">
+                  „Tiszta vizesblokk, barátságos személyzet. A shopban minden van, amit egy sofőr keres:
+                  friss étel, jó kávé, borok. Legközelebb is itt állunk meg.”
+                </p>
+                <footer class="testimonial-card__footer">
+                  <span class="rating" aria-label="5 csillagos értékelés">★★★★★</span>
+                  <span data-i18n="testimonials.source_google">Forrás: Google értékelés</span>
+                </footer>
+              </article>
+              <article class="testimonial-card" role="group" aria-roledescription="slide" aria-label="4 / 4">
+                <div class="testimonial-card__gradient"></div>
+                <header class="testimonial-card__header">
+                  <div class="testimonial-card__avatar">TD</div>
+                  <div>
+                    <h3 data-i18n="testimonials.card4_name">Todor Danailov</h3>
+                    <span data-i18n="testimonials.card4_role">Google értékelés • 2023</span>
+                  </div>
+                </header>
+                <p data-i18n="testimonials.card4_text">
+                  „Biztonságos, jól megvilágított parkoló, profi személyzet. A zuhanyzók újak,
+                  a shop választéka nagy, ár/érték arány kiváló.”
+                </p>
+                <footer class="testimonial-card__footer">
+                  <span class="rating" aria-label="5 csillagos értékelés">★★★★★</span>
+                  <span data-i18n="testimonials.source_google">Forrás: Google értékelés</span>
+                </footer>
+              </article>
+            </div>
+            <div class="testimonials__wall-controls">
+              <button
+                class="testimonials__wall-btn"
+                type="button"
+                data-carousel-prev
+                aria-label="Előző visszajelzés"
+                data-i18n-aria-label="testimonials.prev"
+              >
+                <span aria-hidden="true">‹</span>
+              </button>
+              <div class="testimonial-carousel__dots" data-carousel-dots></div>
+              <button
+                class="testimonials__wall-btn"
+                type="button"
+                data-carousel-next
+                aria-label="Következő visszajelzés"
+                data-i18n-aria-label="testimonials.next"
+              >
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="arlista" class="section pricing" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="pricing.label">Árlista</span>
+          <h2 data-i18n="pricing.title">Egyszerű árak, minden tartalmazva</h2>
+          <p data-i18n="pricing.description">Áraink a helyszínen fizetendők készpénzzel vagy bankkártyával.</p>
+        </div>
+        <div class="grid grid--3">
+          <article class="pricing-card">
+            <h3 data-i18n="pricing.card_basic_title">Csak parkolás</h3>
+            <p class="pricing-card__price" data-i18n="pricing.card_basic_price">€11<span>/24 óra</span></p>
+            <ul>
+              <li data-i18n="pricing.card_basic_item1">Biztonságos, kamerázott parkolóhely</li>
+              <li data-i18n="pricing.card_basic_item2">Terminal & Shop, mosdó használat</li>
+              <li data-i18n="pricing.card_basic_item3">0-24 személyzet</li>
+            </ul>
+          </article>
+          <article class="pricing-card pricing-card--featured">
+            <div class="badge" data-i18n="pricing.card_plus_badge">Ajánlott</div>
+            <h3 data-i18n="pricing.card_plus_title">Parkolás + zuhany</h3>
+            <p class="pricing-card__price" data-i18n="pricing.card_plus_price">€14<span>/24 óra</span></p>
+            <ul>
+              <li data-i18n="pricing.card_plus_item1">Parkolóhely kamerás felügyelettel</li>
+              <li data-i18n="pricing.card_plus_item2">Zuhanyzási és tisztálkodási csomag friss törölközővel</li>
+              <li data-i18n="pricing.card_plus_item3">Ajándék sör érkezéskor, hogy jól induljon a pihenő</li>
+            </ul>
+          </article>
+        </div>
+        <div class="pricing-compare" data-reveal>
+          <h3 data-i18n="pricing.compare_title">Mit tartalmaznak a csomagok?</h3>
+          <div class="pricing-compare__table" role="table">
+            <div class="pricing-compare__row pricing-compare__row--header" role="row">
+              <div role="columnheader"></div>
+              <div role="columnheader" data-i18n="pricing.card_basic_title">Csak parkolás</div>
+              <div role="columnheader" data-i18n="pricing.card_plus_title">Parkolás + zuhany</div>
+            </div>
+            <div class="pricing-compare__row" role="row">
+              <div role="cell" data-i18n="pricing.compare_security">Kamerával őrzött parkoló</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+            </div>
+            <div class="pricing-compare__row" role="row">
+              <div role="cell" data-i18n="pricing.compare_terminal">Terminal & Shop használat</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+            </div>
+            <div class="pricing-compare__row" role="row">
+              <div role="cell" data-i18n="pricing.compare_shower">Zuhany & tisztálkodási csomag</div>
+              <div role="cell" aria-label="nem tartalmaz">—</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+            </div>
+            <div class="pricing-compare__row" role="row">
+              <div role="cell" data-i18n="pricing.compare_beer">Ajándék sör érkezéskor</div>
+              <div role="cell" aria-label="nem tartalmaz">—</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+            </div>
+            <div class="pricing-compare__row" role="row">
+              <div role="cell" data-i18n="pricing.compare_cold">Hűtős blokk áramcsatlakozás</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+              <div role="cell" aria-label="tartalmaz">✔</div>
+            </div>
+            <div class="pricing-compare__row pricing-compare__row--footer" role="row">
+              <div role="cell" data-i18n="pricing.compare_price">Ár / 24 óra</div>
+              <div role="cell">€11</div>
+              <div role="cell">€14</div>
+            </div>
+          </div>
+        </div>
+        <p class="pricing__note" data-i18n="pricing.note">Hűtős kamionoknak az elkülönített blokkban biztosítunk helyet változatlan díjak mellett.</p>
+      </section>
+
+      <section class="section partners" aria-label="Partnereink" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="partners.label">Partnereink</span>
+          <h2 data-i18n="partners.title">Minden fontos szolgáltatás egy udvaron belül</h2>
+        </div>
+        <div class="partner-grid">
+          <article class="partner-card">
+            <div class="partner-card__logo">
+              <img src="https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?auto=format&fit=crop&w=320&q=70" alt="OIL! benzinkút logó" loading="lazy" />
+            </div>
+            <h3 data-i18n="partners.card_oil_title">OIL! benzinkút Halmaj</h3>
+            <p data-i18n="partners.card_oil_text">Tankolás, AdBlue, shop és légnyomás állomás közvetlenül a bejárat mellett.</p>
+          </article>
+          <article class="partner-card">
+            <div class="partner-card__logo">
+              <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=320&q=70" alt="Velvet Étterem logó" loading="lazy" />
+            </div>
+            <h3 data-i18n="partners.card_velvet_title">Velvet Étterem</h3>
+            <p data-i18n="partners.card_velvet_text">Sofőrbarát menük, házias fogások és friss kávé néhány lépésre a parkolótól.</p>
+          </article>
+          <article class="partner-card">
+            <div class="partner-card__logo">
+              <img src="https://images.unsplash.com/photo-1587809361415-0f13889fb6dc?auto=format&fit=crop&w=320&q=70" alt="Gombi gumiszerviz logó" loading="lazy" />
+            </div>
+            <h3 data-i18n="partners.card_gombi_title">Gombi gumi- és autószerviz</h3>
+            <p data-i18n="partners.card_gombi_text">Defektjavítás, gumicsere és műszaki segítség gyors reagálással.</p>
+          </article>
+          <article class="partner-card">
+            <div class="partner-card__logo">
+              <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?auto=format&fit=crop&w=320&q=70" alt="Prémium shop kínálat" loading="lazy" />
+            </div>
+            <h3 data-i18n="partners.card_shop_title">Terminal & Shop</h3>
+            <p data-i18n="partners.card_shop_text">0-24 nyitva snackekkel, italokkal, sofőr comfort termékekkel és prémium borokkal.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section newsroom" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="news.label">Hírek</span>
+          <h2 data-i18n="news.title">Friss információk a parkolóból</h2>
+        </div>
+        <div class="newsroom__grid">
+          <article class="news-card">
+            <span class="news-card__tag" data-i18n="news.card1_tag">Újdonság</span>
+            <h3 data-i18n="news.card1_title">Megújult zuhanyblokkok 2025-ben</h3>
+            <p data-i18n="news.card1_text">Teljesen felújított tisztálkodó térrel és friss törölköző szervizzel várunk.</p>
+            <a href="#" class="news-card__link" data-i18n="news.card1_link">Részletek →</a>
+          </article>
+          <article class="news-card">
+            <span class="news-card__tag" data-i18n="news.card2_tag">Tippek</span>
+            <h3 data-i18n="news.card2_title">Téli felkészülés sofőröknek</h3>
+            <p data-i18n="news.card2_text">Így használd az elkülönített hűtős blokkot a hideg hónapokban.</p>
+            <a href="#" class="news-card__link" data-i18n="news.card2_link">Olvasd el →</a>
+          </article>
+          <article class="news-card">
+            <span class="news-card__tag" data-i18n="news.card3_tag">Shop</span>
+            <h3 data-i18n="news.card3_title">0-24-ben elérhető kedvenceink</h3>
+            <p data-i18n="news.card3_text">Sör- és borkínálatunk, energiaitalok, snackek – mind frissen a hűtőből.</p>
+            <a href="#" class="news-card__link" data-i18n="news.card3_link">Nézd meg →</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section cta" data-reveal>
+      <div class="cta__content">
+          <h2 data-i18n="cta.title">Állj meg nálunk bármikor az út során</h2>
+          <p data-i18n="cta.text">
+            0-24 nyitva tartó Terminal & Shop-pal, elkülönített hűtős blokkal és frissítő
+            szolgáltatásokkal várunk minden sofőrt.
+          </p>
+          <a class="btn btn--primary" href="#lokacio" data-i18n="cta.button">Lokáció & elérés</a>
+      </div>
+      </section>
+
+      <section id="faq" class="section faq" data-reveal>
+        <div class="section__header">
+          <span class="label" data-i18n="faq.label">GYIK</span>
+          <h2 data-i18n="faq.title">Gyakran feltett kérdések</h2>
+        </div>
+        <div class="faq__controls">
+          <label class="faq__search">
+            <span class="sr-only" data-i18n="faq.search_label">Keresés a kérdések között</span>
+            <input
+              type="search"
+              class="faq__search-input"
+              data-faq-search
+              placeholder="Keresés a kérdések között"
+              data-i18n-placeholder="faq.search_placeholder"
+            />
+            <span class="faq__search-icon" aria-hidden="true">🔍</span>
+          </label>
+          <p class="faq__hint" data-i18n="faq.search_hint">Írd be, mire vagy kíváncsi – azonnal megmutatjuk a releváns válaszokat.</p>
+        </div>
+        <div class="faq__grid">
+          <details open data-faq-item>
+            <summary data-i18n="faq.q1">Kell előre foglalni a parkolást?</summary>
+            <p data-i18n="faq.a1">
+              Nem szükséges. Bármikor érkezhetsz, a Terminal & Shop kollégái azonnal
+              segítenek a beléptetésben és helyet jelölnek ki.
+            </p>
+          </details>
+          <details data-faq-item>
+            <summary data-i18n="faq.q2">Mikor van nyitva az iroda és a shop?</summary>
+            <p data-i18n="faq.a2">
+              A Terminal & Shop a hét minden napján 0-24 nyitva tart, folyamatos
+              személyzettel és kamerás felügyelettel.
+            </p>
+          </details>
+          <details data-faq-item>
+            <summary data-i18n="faq.q3">Hol állhatnak a hűtős kamionok?</summary>
+            <p data-i18n="faq.a3">
+              Külön, elkülönített blokkot tartunk fenn számukra, így biztonságos környezetben, zavartalanul üzemeltethetik a hűtést.
+            </p>
+          </details>
+          <details data-faq-item>
+            <summary data-i18n="faq.q4">Milyen termékeket találok a shopban?</summary>
+            <p data-i18n="faq.a4">
+              Snackek, csokik, chipsek, szendvicsek, üdítők, víz, sörök, borok és energiaitalok széles választéka vár egész nap.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kapcsolat" class="footer">
+      <div class="footer__grid">
+        <div class="footer__column footer__column--brand">
+          <div class="brand brand--footer" data-i18n="footer.brand">Jacek Tirparking</div>
+          <p data-i18n="footer.description">
+            Jacek Tirparking – a régió fokozottan védett, teljesen aszfaltozott
+            kamion parkolója, 0-24 őrzéssel és szomszédos kiszolgálóegységekkel.
+          </p>
+          <p class="footer__tagline" data-i18n="footer.tagline">Biztonságos, kamerázott megálló Halmaj logisztikai csomópontján.</p>
+        </div>
+        <div class="footer__column">
+          <h4 data-i18n="footer.contact_title">Elérhetőségek</h4>
+          <ul class="footer__list">
+            <li><a href="tel:+36204177877" data-i18n="footer.phone">+36 20 417 7877</a></li>
+            <li data-i18n="footer.email">info@jacekparking.hu</li>
+            <li data-i18n="footer.address">Halmaj, 022 44, 3842 Hungary</li>
+            <li><a href="https://share.google/jd2f8h6adBJclbngv" target="_blank" rel="noopener noreferrer" data-i18n="footer.map">Google Maps útvonal</a></li>
+          </ul>
+          <h4 data-i18n="footer.hours_title">Nyitvatartás</h4>
+          <ul class="footer__list">
+            <li data-i18n="footer.hours_text">Mindennap 0-24</li>
+            <li data-i18n="footer.hours_note">Terminal & Shop és biztonsági személyzet folyamatosan jelen</li>
+          </ul>
+        </div>
+        <div class="footer__column footer__column--links">
+          <h4 data-i18n="footer.links_title">Navigáció</h4>
+          <ul class="footer__list">
+            <li><a href="#szolgaltatasok" data-i18n="footer.link_services">Szolgáltatások</a></li>
+            <li><a href="#lokacio" data-i18n="footer.link_location">Lokáció</a></li>
+            <li><a href="#borok" data-i18n="footer.link_wine">Prémium borok</a></li>
+            <li><a href="#faq" data-i18n="footer.link_faq">GYIK</a></li>
+          </ul>
+          <h4 data-i18n="footer.wine_title">Prémium boraink</h4>
+          <p class="footer__wine-text" data-i18n="footer.wine_text">Kézzel válogatott fehér, rosé és vörös tételek, hűtve és azonnal vihetők.</p>
+          <a class="btn btn--primary footer__wine-cta" href="#borok" data-i18n="footer.wine_cta">Fedezd fel a borválasztékot</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <small data-i18n="footer.copyright">© 2025 Jacek Tirparking. Minden jog fenntartva.</small>
+        <div class="footer__bottom-right">
+          <span data-i18n="footer.company">Jacek Tirparking</span>
+          <div class="social">
+            <a href="#" aria-label="Facebook">Fb</a>
+            <a href="#" aria-label="LinkedIn">In</a>
+            <a href="#" aria-label="YouTube">Yt</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Ugrás az oldal tetejére" data-i18n-aria-label="backtotop.aria">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
+
